@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <title>Todo</title>
     <style>
+        .content__tasks__task-name {
+            display: inline;
+        }
+
+        .content__tasks {
+            list-style-type: none;
+        }
+
         .nav-menu {
             overflow: hidden;
         }
+
         .nav-menu-item {
             float: left;
             list-style-type: none;
+            display: inline;
         }
     </style>
 </head>
@@ -21,20 +31,32 @@
     <ul class="content__tasks">
         <li class="content__tasks__new-task">
             <label class="content__new-task__task">
-                <input type="text" name="newtask" placeholder="What needs to be done?">
+                <input class="newtask" type="text" placeholder="What needs to be done?">
             </label>
         </li>
-        <li class="content__tasks_task">
-            <div>HTML</div>
+        <li class="content__tasks__task">
+            <label class="content__tasks__task-check">
+                <input type="checkbox">
+            </label>
+            <div class="content__tasks__task-name">HTML</div>
         </li>
-        <li class="content__tasks_task">
-            <div>CSS</div>
+        <li class="content__tasks__task">
+            <label class="content__tasks__task-check">
+                <input type="checkbox">
+            </label>
+            <div class="content__tasks__task-name">CSS</div>
         </li>
-        <li class="content__tasks_task">
-            <div>JS</div>
+        <li class="content__tasks__task">
+            <label class="content__tasks__task-check">
+                <input type="checkbox">
+            </label>
+            <div class="content__tasks__task-name">JS</div>
         </li>
-        <li class="content__tasks_task">
-            <div>JS Tools</div>
+        <li class="content__tasks__task">
+            <label class="content__tasks__task-check">
+                <input type="checkbox">
+            </label>
+            <div class="content__tasks__task-name">JS Tools</div>
         </li>
     </ul>
 </main>
