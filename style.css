@@ -1,0 +1,19 @@
+.content__tasks__task-name {
+    display: inline;
+}
+
+.content__tasks {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-menu {
+    overflow: hidden;
+    display: inline;
+}
+
+.nav-menu-item {
+    float: left;
+    list-style-type: none;
+    display: inline;
+}
