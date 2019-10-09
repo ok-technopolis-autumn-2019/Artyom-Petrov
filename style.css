@@ -11,9 +11,3 @@
     overflow: hidden;
     display: inline;
 }
-
-.nav-menu-item {
-    float: left;
-    list-style-type: none;
-    display: inline;
-}

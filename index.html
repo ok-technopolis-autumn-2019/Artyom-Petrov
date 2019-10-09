@@ -7,51 +7,52 @@
     </head>
     <body>
         <header class="heading">
-            <em class="heading__title">todos</em>
+            <h1 class="heading__title">todos</h1>
         </header>
         <main class="content">
             <div class="content__new-task">
                 <button class="content__new-task__check-all">Check all</button>
-                <label class="content__new-task_task">
-                    <input class="newtask" type="text" placeholder="What needs to be done?"/>
-                </label>
+                <input class="newtask" type="text" placeholder="What needs to be done?"/>
             </div>
             <ul class="content__tasks">
                 <li class="content__tasks__task">
-                    <label class="content__tasks__task-check">
-                        <input type="checkbox"/>
+                    <label>
+                        <input type="checkbox" class="content__tasks__task-check"/>
+                        HTML
                     </label>
-                    <div class="content__tasks__task-name">HTML</div>
-                    <button hidden="hidden">Delete</button>
-                </li>
-                <li class="content__tasks__task">
-                    <label class="content__tasks__task-check">
-                        <input type="checkbox"/>
-                    </label>
-                    <div class="content__tasks__task-name">CSS</div>
-                    <button hidden="hidden">Delete</button>
-                </li>
-                <li class="content__tasks__task">
-                    <label class="content__tasks__task-check">
-                        <input type="checkbox"/>
-                    </label>
-                    <div class="content__tasks__task-name">JS</div>
                     <button>Delete</button>
                 </li>
                 <li class="content__tasks__task">
-                    <label class="content__tasks__task-check">
-                        <input type="checkbox"/>
+                    <label>
+                        <input type="checkbox" class="content__tasks__task-check"/>
+                        CSS
                     </label>
-                    <div class="content__tasks__task-name">JS Tools</div>
-                    <button hidden="hidden">Delete</button>
+                    <button>Delete</button>
+                </li>
+                <li>
+                    <label class="content__tasks__task-check">
+                        <input type="checkbox" class="content__tasks__task"/>
+                        JS
+                    </label>
+                    <button>Delete</button>
+                </li>
+                <li class="content__tasks__task">
+                    <label>
+                        <input type="checkbox" class="content__tasks__task-check"/>
+                        JS Tools
+                    </label>
+                    <button>Delete</button>
                 </li>
             </ul>
         </main>
         <footer>
             <div class="nav-menu">
-                <label class="nav-menu__items-left">3 items left</label>
-                <button class="nav-menu__show-active">Active</button>
-                <button class="nav-menu__show-completed">Completed</button>
+                <div class="nav-menu__items-left">3 items left</div>
+                <div class="nav-menu__filter-buttons">
+                    <button class="nav-menu__filter-buttons__show-all">All</button>
+                    <button class="nav-menu__filter-buttons__show-active">Active</button>
+                    <button class="nav-menu__filter-buttons__show-completed">Completed</button>
+                </div>
                 <button class="nav-menu__clear-completed">Clear completed</button>
             </div>
         </footer>
