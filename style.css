@@ -1,13 +1,213 @@
-.content__tasks__task-name {
-    display: inline;
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    outline: none;
+}
+
+.wrapper {
+    width: 500px;
+    background: #F7F7F7;
+    padding: 0 30px 10px 30px;
+    align-self: center;
+}
+
+.heading__title {
+    height: auto;
+    text-align: center;
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 100px;
+    line-height: 21px;
+    color: #CCCCCC;
+}
+
+.content {
+    padding: 0 0 0 0;
+    margin: 0 0 5px 0;
+    background-color: white;
+    border: solid 1px #F0F0F0;
+}
+
+.content__new-task {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    border-bottom: solid 1px lightgrey;
+}
+
+.content__new-task__check-all {
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    padding: 0;
+    margin: 0 0 0 2px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.check-all-tick {
+    width: 50px;
+    height: 50px;
+    fill: none;
+    stroke: gray;
+    stroke-width: 3;
+}
+
+
+.content__new-task__check-all:hover svg polyline {
+    stroke: green;
+}
+
+.content__new-task__check-all:active {
+    background-color: #F0F0F0
+}
+
+.newtask {
+    flex: 1;
+    border: none;
+    outline: none;
+    color: #505050;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.newtask::placeholder {
+    color: #AFAFAF;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 25px;
 }
 
 .content__tasks {
     list-style-type: none;
+    margin: 0 0 50px 0;
     padding: 0;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+}
+
+.content__tasks__task {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px lightgrey;
+    padding: 3px;
+}
+
+.content__tasks__task:hover {
+    background-color: #F0F0F0;
+}
+
+.checkbox-svg {
+    margin: 0px 3px 0px 0px;
+    width: 50px;
+    height: 50px;
+    stroke: lightgrey;
+    fill: none;
+}
+
+.checked-tick {
+    stroke: none;
+    stroke-width: 2px;
+}
+
+.content__tasks__task-check:checked + .checkbox-svg .checked-tick, .content__tasks__task-check:checked + .checkbox-svg {
+    stroke: green;
+}
+
+.content__tasks__task-text {
+    flex: 1;
+    fill: none;
+    color: #505050;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.content__tasks__task-check:checked + * + .content__tasks__task-text {
+    color: grey;
+    text-decoration: line-through;
+}
+
+.content__tasks__task-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.content__tasks__task-check {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: -1000px;
+}
+
+.content__tasks__task-delete {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    font-size: 0;
+    margin: 0 0 0 auto;
+}
+
+.cross {
+    width: 50px;
+    height: 50px;
+    stroke-width: 2px;
+    stroke: none;
+}
+
+.content__tasks__task-delete:hover .cross {
+    stroke: black;
+}
+
+.content__tasks__task:hover .content__tasks__task-delete .cross {
+    stroke: lightgrey;
 }
 
 .nav-menu {
-    overflow: hidden;
-    display: inline;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.nav-menu__items-left {
+    color: grey;
+}
+
+.nav-menu button {
+    background-color: transparent;
+    border: solid 1px transparent;
+    color: grey;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.nav-menu__items-left {
+    padding: 3px;
+    color: grey;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.nav-menu__filter-buttons__show-all:hover, .nav-menu__filter-buttons__show-active:hover, .nav-menu__filter-buttons__show-completed:hover {
+    color: #4F4F4F;
+    border: solid 1px grey;
+    border-radius: 7px;
+}
+
+.nav-menu__clear-completed:hover {
+    color: #2F2F2F;
+    text-decoration: underline;
 }

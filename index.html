@@ -1,60 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <title>Todo</title>
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="style.css" />
     </head>
+
     <body>
-        <header class="heading">
-            <h1 class="heading__title">todos</h1>
-        </header>
-        <main class="content">
-            <div class="content__new-task">
-                <button class="content__new-task__check-all">Check all</button>
-                <input class="newtask" type="text" placeholder="What needs to be done?"/>
-            </div>
-            <ul class="content__tasks">
-                <li class="content__tasks__task">
-                    <label>
-                        <input type="checkbox" class="content__tasks__task-check"/>
-                        HTML
-                    </label>
-                    <button>Delete</button>
-                </li>
-                <li class="content__tasks__task">
-                    <label>
-                        <input type="checkbox" class="content__tasks__task-check"/>
-                        CSS
-                    </label>
-                    <button>Delete</button>
-                </li>
-                <li>
-                    <label class="content__tasks__task-check">
-                        <input type="checkbox" class="content__tasks__task"/>
-                        JS
-                    </label>
-                    <button>Delete</button>
-                </li>
-                <li class="content__tasks__task">
-                    <label>
-                        <input type="checkbox" class="content__tasks__task-check"/>
-                        JS Tools
-                    </label>
-                    <button>Delete</button>
-                </li>
-            </ul>
-        </main>
-        <footer>
-            <div class="nav-menu">
-                <div class="nav-menu__items-left">3 items left</div>
-                <div class="nav-menu__filter-buttons">
-                    <button class="nav-menu__filter-buttons__show-all">All</button>
-                    <button class="nav-menu__filter-buttons__show-active">Active</button>
-                    <button class="nav-menu__filter-buttons__show-completed">Completed</button>
+        <div class="wrapper">
+            <header class="heading">
+                <h1 class="heading__title">todos</h1>
+            </header>
+            <main class="content">
+                <div class="content__new-task">
+                    <button class="content__new-task__check-all" aria-label="Check all">
+                        <svg class="check-all-tick">
+                            <polyline points="13,20 25,30 37,20" />
+                        </svg>
+                    </button>
+                    <input class="newtask" type="text" placeholder="What needs to be done?" />
                 </div>
-                <button class="nav-menu__clear-completed">Clear completed</button>
-            </div>
-        </footer>
+                <ul class="content__tasks">
+                    <li class="content__tasks__task">
+                        <label class="content__tasks__task-content">
+                            <input type="checkbox" class="content__tasks__task-check" />
+                            <svg class="checkbox-svg">
+                                <circle cx="25" cy="25" r="18" />
+                                <polyline class="checked-tick" points="15,25 24,33 36,19" />
+                            </svg>
+                            <div class="content__tasks__task-text">HTML</div>
+                        </label>
+                        <button class="content__tasks__task-delete" aria-label="Delete">
+                            <svg class="cross">
+                                <line x1="15" y1="15" x2="35" y2="35" />
+                                <line x1="15" y1="35" x2="35" y2="15" />
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="content__tasks__task">
+                        <label class="content__tasks__task-content">
+                            <input type="checkbox" class="content__tasks__task-check" />
+                            <svg class="checkbox-svg">
+                                <circle cx="25" cy="25" r="18" />
+                                <polyline class="checked-tick" points="15,25 24,33 36,19" />
+                            </svg>
+                            <span class="content__tasks__task-text">CSS</span>
+                        </label>
+                        <button class="content__tasks__task-delete" aria-label="Delete">
+                            <svg class="cross">
+                                <line x1="15" y1="15" x2="35" y2="35" />
+                                <line x1="15" y1="35" x2="35" y2="15" />
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="content__tasks__task">
+                        <label class="content__tasks__task-content">
+                            <input type="checkbox" class="content__tasks__task-check" />
+                            <svg class="checkbox-svg">
+                                <circle cx="25" cy="25" r="18"  />
+                                <polyline class="checked-tick" points="15,25 24,33 36,19" />
+                            </svg>
+                            <span class="content__tasks__task-text">JS</span>
+                        </label>
+                        <button class="content__tasks__task-delete" aria-label="Delete">
+                            <svg class="cross">
+                                <line x1="15" y1="15" x2="35" y2="35" />
+                                <line x1="15" y1="35" x2="35" y2="15" />
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="content__tasks__task">
+                        <label class="content__tasks__task-content">
+                            <input type="checkbox" class="content__tasks__task-check" />
+                            <svg class="checkbox-svg">
+                                <circle cx="25" cy="25" r="18"  />
+                                <polyline class="checked-tick" points="15,25 24,33 36,19" />
+                            </svg>
+                            <span class="content__tasks__task-text">JS Tools</span>
+                        </label>
+                        <button class="content__tasks__task-delete" aria-label="Delete">
+                            <svg class="cross">
+                                <line x1="15" y1="15" x2="35" y2="35" />
+                                <line x1="15" y1="35" x2="35" y2="15" />
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </main>
+            <footer>
+                <div class="nav-menu">
+                    <div class="nav-menu__items-left">3 items left</div>
+                    <div class="nav-menu__filter-buttons">
+                        <button class="nav-menu__filter-buttons__show-all">All</button>
+                        <button class="nav-menu__filter-buttons__show-active">Active</button>
+                        <button class="nav-menu__filter-buttons__show-completed">Completed</button>
+                    </div>
+                    <button class="nav-menu__clear-completed">Clear completed</button>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>
