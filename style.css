@@ -3,6 +3,14 @@ body {
     flex-direction: column;
 }
 
+button:focus {
+    outline: solid 2px #C0C0C0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 .wrapper {
     width: 500px;
     background: #F7F7F7;
@@ -14,10 +22,11 @@ body {
     text-align: center;
     font-family: Roboto, serif;
     font-style: normal;
-    font-weight: 200;
+    font-weight: 100;
     font-size: 100px;
     line-height: 21px;
     color: #CCCCCC;
+    cursor: default;
 }
 
 .content {
@@ -69,13 +78,14 @@ body {
     font-family: Roboto, sans-serif;
     font-weight: 300;
     font-size: 25px;
-    padding: 5px;
+    padding: 3px;
+    margin: 0 0 0 2px;
 }
 
 .newtask::placeholder {
     color: #AFAFAF;
     font-family: Roboto, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-style: italic;
     font-size: 25px;
 }
@@ -112,14 +122,20 @@ body {
     stroke-width: 2px;
 }
 
-.content__tasks__task-check:checked+.content__tasks__task-content .checkbox-svg .checked-tick,
-.content__tasks__task-check:checked+.content__tasks__task-content .checkbox-svg {
+.content__tasks__task-check:focus + .content__tasks__task-content .checkbox-svg {
+    stroke: #C0C0C0;
+    stroke-width: 2px;
+}
+
+.content__tasks__task-check:checked + .content__tasks__task-content .checkbox-svg .checked-tick,
+.content__tasks__task-check:checked + .content__tasks__task-content .checkbox-svg {
     stroke: green;
 }
 
 .content__tasks__task-content {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .content__tasks__task-check {
@@ -138,7 +154,7 @@ body {
     font-size: 22px;
 }
 
-.content__tasks__task-check:checked~.content__tasks__task-text {
+.content__tasks__task-check:checked ~ .content__tasks__task-text {
     color: grey;
     text-decoration: line-through;
 }
@@ -159,17 +175,25 @@ body {
     stroke: none;
 }
 
-.content__tasks__task-delete:hover .cross {
-    stroke: black;
+.content__tasks__task-delete:focus .cross {
+    stroke: lightgrey;
 }
 
 .content__tasks__task:hover .content__tasks__task-delete .cross {
     stroke: lightgrey;
 }
 
+.content__tasks__task:hover .content__tasks__task-delete:hover .cross {
+    stroke: grey;
+}
+
 .nav-menu {
     display: flex;
     justify-content: space-between;
+}
+
+.nav-menu__items__items-left {
+    cursor: default;
 }
 
 .filter-buttons__text {
@@ -188,6 +212,7 @@ body {
     font-family: Roboto, sans-serif;
     font-weight: 300;
     font-size: 14px;
+    cursor: default;
 }
 
 .nav-menu__filter-buttons {
@@ -196,17 +221,27 @@ body {
 
 .nav-menu__filter-button {
     border: solid 1px transparent;
-    padding: 0 2px 0 2px;
+    padding: 0 0 0 2px;
+    cursor: pointer;
 }
 
 .filter-buttons__radio {
-    display: none;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: -9999px;
 }
 
-.filter-buttons__radio:checked+.filter-buttons__text {
+.filter-buttons__radio:checked + .nav-menu__filter-button {
     color: #4F4F4F;
     border: solid 1px #AFAFAF;
     border-radius: 4px;
+}
+
+.filter-buttons__radio:focus + .nav-menu__filter-button {
+    color: #4F4F4F;
+    outline: solid 2px #AFAFAF;
+    border-color: transparent;
 }
 
 .nav-menu__clear-completed {

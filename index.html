@@ -4,6 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <title>Todo</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i&display=swap&subset=cyrillic" rel="stylesheet">
+
         <link rel="stylesheet" href="style.css" />
     </head>
 
@@ -31,6 +33,7 @@
                             </svg>
                         </label>
                         <div class="content__tasks__task-text">HTML</div>
+
                         <button class="content__tasks__task-delete" type="button" aria-label="Delete">
                             <svg class="cross">
                                 <line x1="15" y1="15" x2="35" y2="35" />
@@ -92,16 +95,16 @@
                 <div class="nav-menu">
                     <div class="nav-menu__items-left">3 items left</div>
                     <div class="nav-menu__filter-buttons" role="group">
-                        <label class="nav-menu__filter-button">
-                            <input class="filter-buttons__radio" type="radio" name="filters" checked="checked" value="All" />
+                        <input class="filter-buttons__radio" id="all-checkbox" type="radio" name="filters" checked="checked" value="All" />
+                        <label class="nav-menu__filter-button" for="all-checkbox">
                             <span class="filter-buttons__text">All</span>
                         </label>
-                        <label class="nav-menu__filter-button">
-                            <input class="filter-buttons__radio" type="radio" name="filters" value="Active" />
+                        <input class="filter-buttons__radio" id="active-checkbox" type="radio" name="filters" value="Active" />
+                        <label class="nav-menu__filter-button" for="active-checkbox">
                             <span class="filter-buttons__text">Active</span>
                         </label>
-                        <label class="nav-menu__filter-button">
-                            <input class="filter-buttons__radio" type="radio" name="filters" value="Completed" />
+                        <input class="filter-buttons__radio" id="completed-checkbox" type="radio" name="filters" value="Completed" />
+                        <label class="nav-menu__filter-button" for="completed-checkbox">
                             <span class="filter-buttons__text">Completed</span>
                         </label>
                     </div>
