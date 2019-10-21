@@ -12,77 +12,77 @@
     <body>
         <div class="wrapper">
             <header class="heading">
-                <h1 class="heading__title">todos</h1>
+                <h1 class="title">todos</h1>
             </header>
             <main class="content">
-                <div class="content__new-task">
-                    <button class="content__new-task__check-all" type="button" aria-label="Check all">
+                <div class="new-task">
+                    <button class="check-all-button" type="button" aria-label="Check all">
                         <svg class="check-all-tick">
                             <polyline points="13,20 25,30 37,20" />
                         </svg>
                     </button>
                     <input class="newtask" type="text" placeholder="What needs to be done?" />
                 </div>
-                <ul class="content__tasks">
-                    <li class="content__tasks__task">
-                        <input type="checkbox" class="content__tasks__task-check" id="task-check1" />
-                        <label class="content__tasks__task-content" for="task-check1">
+                <ul class="tasks">
+                    <li class="task">
+                        <input type="checkbox" class="task-checkbox" id="task-check1" />
+                        <label class="task-label" for="task-check1">
                             <svg class="checkbox-svg">
                                 <circle cx="25" cy="25" r="18" />
                                 <polyline class="checked-tick" points="15,25 24,33 36,19" />
                             </svg>
                         </label>
-                        <div class="content__tasks__task-text">HTML</div>
+                        <div class="task-text">HTML</div>
 
-                        <button class="content__tasks__task-delete" type="button" aria-label="Delete">
+                        <button class="task-delete-button" type="button" aria-label="Delete">
                             <svg class="cross">
                                 <line x1="15" y1="15" x2="35" y2="35" />
                                 <line x1="15" y1="35" x2="35" y2="15" />
                             </svg>
                         </button>
                     </li>
-                    <li class="content__tasks__task">
-                        <input type="checkbox" class="content__tasks__task-check" id="task-check2" />
-                        <label class="content__tasks__task-content" for="task-check2">
+                    <li class="task">
+                        <input type="checkbox" class="task-checkbox" id="task-check2" />
+                        <label class="task-label" for="task-check2">
                             <svg class="checkbox-svg">
                                 <circle cx="25" cy="25" r="18" />
                                 <polyline class="checked-tick" points="15,25 24,33 36,19" />
                             </svg>
                         </label>
-                        <div class="content__tasks__task-text">CSS</div>
-                        <button class="content__tasks__task-delete" type="button" aria-label="Delete">
+                        <div class="task-text">CSS</div>
+                        <button class="task-delete-button" type="button" aria-label="Delete">
                             <svg class="cross">
                                 <line x1="15" y1="15" x2="35" y2="35" />
                                 <line x1="15" y1="35" x2="35" y2="15" />
                             </svg>
                         </button>
                     </li>
-                    <li class="content__tasks__task">
-                        <input type="checkbox" class="content__tasks__task-check" id="task-check3" />
-                        <label class="content__tasks__task-content" for="task-check3">
+                    <li class="task">
+                        <input type="checkbox" class="task-checkbox" id="task-check3" />
+                        <label class="task-label" for="task-check3">
                             <svg class="checkbox-svg">
                                 <circle cx="25" cy="25" r="18" />
                                 <polyline class="checked-tick" points="15,25 24,33 36,19" />
                             </svg>
                         </label>
-                        <div class="content__tasks__task-text">JS</div>
-                        <button class="content__tasks__task-delete" type="button" aria-label="Delete">
+                        <div class="task-text">JS</div>
+                        <button class="task-delete-button" type="button" aria-label="Delete">
                             <svg class="cross">
                                 <line x1="15" y1="15" x2="35" y2="35" />
                                 <line x1="15" y1="35" x2="35" y2="15" />
                             </svg>
                         </button>
                     </li>
-                    <li class="content__tasks__task">
-                        <input type="checkbox" class="content__tasks__task-check" id="task-check4" />
-                        <label class="content__tasks__task-content" for="task-check4">
+                    <li class="task">
+                        <input type="checkbox" class="task-checkbox" id="task-check4" />
+                        <label class="task-label" for="task-check4">
                             <svg class="checkbox-svg">
                                 <circle cx="25" cy="25" r="18" />
                                 <polyline class="checked-tick" points="15,25 24,33 36,19" />
                             </svg>
                         </label>
-                        <div class="content__tasks__task-text">JS Tools</div>
-                        <button class="content__tasks__task-delete" type="button" aria-label="Delete">
+                        <div class="task-text">JS Tools</div>
+                        <button class="task-delete-button" type="button" aria-label="Delete">
                             <svg class="cross">
                                 <line x1="15" y1="15" x2="35" y2="35" />
                                 <line x1="15" y1="35" x2="35" y2="15" />
@@ -93,22 +93,22 @@
             </main>
             <footer>
                 <div class="nav-menu">
-                    <div class="nav-menu__items-left">3 items left</div>
-                    <div class="nav-menu__filter-buttons" role="group">
-                        <input class="filter-buttons__radio" id="all-checkbox" type="radio" name="filters" checked="checked" value="All" />
-                        <label class="nav-menu__filter-button" for="all-checkbox">
-                            <span class="filter-buttons__text">All</span>
+                    <div class="items-left">3 items left</div>
+                    <div class="filter-buttons" role="group">
+                        <input class="filter-button-radio" id="all-checkbox" type="radio" name="filters" checked="checked" value="All" />
+                        <label class="filter-button-radio-label" for="all-checkbox">
+                            <span class="filter-button-text">All</span>
                         </label>
-                        <input class="filter-buttons__radio" id="active-checkbox" type="radio" name="filters" value="Active" />
-                        <label class="nav-menu__filter-button" for="active-checkbox">
-                            <span class="filter-buttons__text">Active</span>
+                        <input class="filter-button-radio" id="active-checkbox" type="radio" name="filters" value="Active" />
+                        <label class="filter-button-radio-label" for="active-checkbox">
+                            <span class="filter-button-text">Active</span>
                         </label>
-                        <input class="filter-buttons__radio" id="completed-checkbox" type="radio" name="filters" value="Completed" />
-                        <label class="nav-menu__filter-button" for="completed-checkbox">
-                            <span class="filter-buttons__text">Completed</span>
+                        <input class="filter-button-radio" id="completed-checkbox" type="radio" name="filters" value="Completed" />
+                        <label class="filter-button-radio-label" for="completed-checkbox">
+                            <span class="filter-button-text">Completed</span>
                         </label>
                     </div>
-                    <button class="nav-menu__clear-completed" type="button">Clear completed</button>
+                    <button class="clear-completed-button" type="button">Clear completed</button>
                 </div>
             </footer>
         </div>

@@ -18,13 +18,14 @@ button:hover {
     align-self: center;
 }
 
-.heading__title {
+.title {
+    margin: 0;
+    line-height: 100%;
     text-align: center;
     font-family: Roboto, serif;
     font-style: normal;
     font-weight: 100;
     font-size: 100px;
-    line-height: 21px;
     color: #CCCCCC;
     cursor: default;
 }
@@ -36,14 +37,14 @@ button:hover {
     border: solid 1px #F0F0F0;
 }
 
-.content__new-task {
+.new-task {
     display: flex;
     align-items: stretch;
     justify-content: center;
     border-bottom: solid 1px lightgrey;
 }
 
-.content__new-task__check-all {
+.check-all-button {
     width: 50px;
     height: 50px;
     font-size: 0;
@@ -62,11 +63,11 @@ button:hover {
 }
 
 
-.content__new-task__check-all:hover .check-all-tick {
+.check-all-button:hover .check-all-tick {
     stroke: green;
 }
 
-.content__new-task__check-all:active {
+.check-all-button:active {
     background-color: #F0F0F0;
 }
 
@@ -90,7 +91,7 @@ button:hover {
     font-size: 25px;
 }
 
-.content__tasks {
+.tasks {
     list-style-type: none;
     margin: 0 0 50px 0;
     padding: 0;
@@ -98,14 +99,14 @@ button:hover {
     font-weight: 300;
 }
 
-.content__tasks__task {
+.task {
     display: flex;
     align-items: center;
     border-bottom: solid 1px lightgrey;
     padding: 3px;
 }
 
-.content__tasks__task:hover {
+.task:hover {
     background-color: #F0F0F0;
 }
 
@@ -122,44 +123,45 @@ button:hover {
     stroke-width: 2px;
 }
 
-.content__tasks__task-check:focus + .content__tasks__task-content .checkbox-svg {
+.task-checkbox:focus + .task-label .checkbox-svg {
     stroke: #C0C0C0;
     stroke-width: 2px;
 }
 
-.content__tasks__task-check:checked + .content__tasks__task-content .checkbox-svg .checked-tick,
-.content__tasks__task-check:checked + .content__tasks__task-content .checkbox-svg {
+.task-checkbox:checked + .task-label .checkbox-svg .checked-tick,
+.task-checkbox:checked + .task-label .checkbox-svg {
     stroke: green;
 }
 
-.content__tasks__task-content {
+.task-label {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.content__tasks__task-check {
+.task-checkbox {
     width: 50px;
     height: 50px;
     position: absolute;
     left: -1000px;
 }
 
-.content__tasks__task-text {
+.task-text {
     flex: 1;
     fill: none;
     color: #505050;
     font-family: Roboto, sans-serif;
     font-weight: 300;
     font-size: 22px;
+    word-break: break-word;
 }
 
-.content__tasks__task-check:checked ~ .content__tasks__task-text {
+.task-checkbox:checked ~ .task-text {
     color: grey;
     text-decoration: line-through;
 }
 
-.content__tasks__task-delete {
+.task-delete-button {
     width: 50px;
     height: 50px;
     background-color: transparent;
@@ -175,15 +177,15 @@ button:hover {
     stroke: none;
 }
 
-.content__tasks__task-delete:focus .cross {
+.task-delete-button:focus .cross {
     stroke: lightgrey;
 }
 
-.content__tasks__task:hover .content__tasks__task-delete .cross {
+.task:hover .task-delete-button .cross {
     stroke: lightgrey;
 }
 
-.content__tasks__task:hover .content__tasks__task-delete:hover .cross {
+.task:hover .task-delete-button:hover .cross {
     stroke: grey;
 }
 
@@ -196,7 +198,7 @@ button:hover {
     cursor: default;
 }
 
-.filter-buttons__text {
+.filter-button-text {
     padding: 0 5px 0 5px;
     background-color: transparent;
     border: solid 1px transparent;
@@ -206,7 +208,7 @@ button:hover {
     font-size: 14px;
 }
 
-.nav-menu__items-left {
+.items-left {
     padding: 3px;
     color: grey;
     font-family: Roboto, sans-serif;
@@ -215,36 +217,36 @@ button:hover {
     cursor: default;
 }
 
-.nav-menu__filter-buttons {
+.filter-buttons {
     padding: 2px;
 }
 
-.nav-menu__filter-button {
+.filter-button-radio-label {
     border: solid 1px transparent;
     padding: 0 0 0 2px;
     cursor: pointer;
 }
 
-.filter-buttons__radio {
+.filter-button-radio {
     width: 10px;
     height: 10px;
     position: absolute;
     left: -9999px;
 }
 
-.filter-buttons__radio:checked + .nav-menu__filter-button {
+.filter-button-radio:checked + .filter-button-radio-label {
     color: #4F4F4F;
     border: solid 1px #AFAFAF;
     border-radius: 4px;
 }
 
-.filter-buttons__radio:focus + .nav-menu__filter-button {
+.filter-button-radio:focus + .filter-button-radio-label {
     color: #4F4F4F;
     outline: solid 2px #AFAFAF;
     border-color: transparent;
 }
 
-.nav-menu__clear-completed {
+.clear-completed-button {
     background-color: transparent;
     border: solid 1px transparent;
     border-radius: 10px;
@@ -254,7 +256,7 @@ button:hover {
     font-size: 14px;
 }
 
-.nav-menu__clear-completed:hover {
+.clear-completed-button:hover {
     color: #2F2F2F;
     border: solid 1px #C0C0C0;
 }
